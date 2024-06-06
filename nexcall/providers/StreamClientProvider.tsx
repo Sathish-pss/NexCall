@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { ReactNode, useState, useEffect } from "react";
 import { StreamVideo, StreamVideoClient } from "@stream-io/video-react-sdk";
 import { useUser } from "@clerk/nextjs";
@@ -23,7 +23,7 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
       apiKey,
       user: {
         id: user?.id,
-        name: user?.username || user?.id,
+        name: user?.fullName || user?.id,
         image: user?.imageUrl,
       },
       tokenProvider,

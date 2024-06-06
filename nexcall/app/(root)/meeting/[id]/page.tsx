@@ -12,6 +12,7 @@ const Meeting = ({ params: { id } }: { params: { id: string } }) => {
   const [isSetupComplete, setIsSetupComplete] = useState(false);
   // Destructuring the user details using clerk
   const { user, isLoaded } = useUser();
+  console.log("Clerk User Details", user);
 
   // Destructuring the hook details from the useGetCallById hook
   const { call, isCallLoading } = useGetCallById(id);
